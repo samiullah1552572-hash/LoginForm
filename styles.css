@@ -1,0 +1,284 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #202124;
+    font-size: 14px;
+    line-height: 1.4286;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Logo Styles */
+.logo-container {
+    text-align: center;
+    padding: 24px 0 0;
+    margin-bottom: 20px;
+}
+
+.google-logo {
+    height: 24px;
+    width: auto;
+}
+
+/* Login Card */
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 48px 40px 36px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
+    margin-bottom: 8px;
+    text-align: center;
+    color: #202124;
+}
+
+.subheading {
+    color: #202124;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Form Styles */
+.login-form {
+    width: 100%;
+}
+
+.form-step {
+    transition: all 0.3s ease;
+}
+
+.form-step.hidden {
+    display: none;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.input-field {
+    width: 100%;
+    height: 56px;
+    padding: 13px 15px;
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    outline: none;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.input-field:focus {
+    border-color: #1a73e8;
+    border-width: 2px;
+    padding: 12px 14px;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    transform: translateY(-85%) scale(0.75);
+    background: white;
+    padding: 0 5px;
+    left: 8px;
+    color: #1a73e8;
+}
+
+.input-label {
+    position: absolute;
+    left: 14px;
+    top: 19px;
+    color: #5f6368;
+    font-size: 16px;
+    transition: all 0.2s;
+    pointer-events: none;
+    transform-origin: left top;
+}
+
+.input-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #1a73e8;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.input-field:focus ~ .input-underline {
+    transform: scaleX(1);
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 26px;
+}
+
+.create-account {
+    color: #1a73e8;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 0;
+    transition: background-color 0.2s;
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+
+.create-account:hover {
+    background-color: rgba(26, 115, 232, 0.04);
+    text-decoration: none;
+}
+
+.next-button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    height: 36px;
+    min-width: 78px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.next-button:hover {
+    background-color: #1765cc;
+    box-shadow: 0 1px 2px 0 rgba(66, 133, 244, 0.3), 0 1px 3px 1px rgba(66, 133, 244, 0.15);
+}
+
+.next-button:active {
+    background-color: #1a73e8;
+    box-shadow: 0 1px 2px 0 rgba(66, 133, 244, 0.3), 0 2px 6px 2px rgba(66, 133, 244, 0.15);
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    padding: 24px 0;
+    margin-top: auto;
+}
+
+.footer-links {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.footer-link {
+    color: #5f6368;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Language Selector */
+.language-selector {
+    margin-top: 24px;
+    text-align: left;
+}
+
+.language-select {
+    border: none;
+    color: #1a73e8;
+    font-size: 13px;
+    padding: 8px 0;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.language-select:hover {
+    text-decoration: underline;
+}
+
+/* Forgot Email/Link Styles */
+.forgot-email {
+    margin-top: -8px;
+    margin-bottom: 24px;
+}
+
+.link {
+    color: #1a73e8;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .card {
+        padding: 24px;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .login-container {
+        padding: 0 16px;
+    }
+    
+    .heading {
+        font-size: 22px;
+    }
+    
+    .subheading {
+        font-size: 15px;
+    }
+}

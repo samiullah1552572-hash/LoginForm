@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Google Accounts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <div class="logo-container">
+                <img src="https://www.google.com/images/branding/google/logo/1x/googlelogo_color_272x92dp.png" alt="Google" class="google-logo">
+            </div>
+            
+            <div class="card" id="loginCard">
+                <h1 class="heading">Sign in</h1>
+                <p class="subheading">to continue to Gmail</p>
+                
+                <form id="loginForm" class="login-form">
+                    <!-- Email Step -->
+                    <div class="form-step" id="emailStep">
+                        <div class="input-container">
+                            <input type="email" id="email" name="email" class="input-field" autocomplete="username" required>
+                            <label for="email" class="input-label">Email or phone</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <div class="forgot-email">
+                            <a href="#" class="link">Forgot email?</a>
+                        </div>
+                        <div class="button-container">
+                            <a href="#" class="create-account">Create account</a>
+                            <button type="button" id="nextBtn" class="next-button">Next</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Password Step (initially hidden) -->
+                    <div class="form-step hidden" id="passwordStep">
+                        <div class="input-container">
+                            <input type="password" id="password" name="password" class="input-field" required>
+                            <label for="password" class="input-label">Enter your password</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <div class="forgot-email">
+                            <a href="#" class="link">Forgot password?</a>
+                        </div>
+                        <div class="button-container">
+                            <a href="#" class="create-account">Create account</a>
+                            <button type="submit" class="next-button">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="language-selector">
+                    <select class="language-select">
+                        <option>English (United States)</option>
+                        <option>Español</option>
+                        <option>Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Help</a>
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Terms</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
